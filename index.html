@@ -8,18 +8,11 @@
         background-size: cover;
     }
     #cf{
-        background-color: rgb(12, 224, 12);
-        padding-top: 3px;
-        padding-right: 1px;
-        padding-bottom: 3px;
-        padding-left: 1px;
-            }
-    #df{
-        background-color: rgb(148, 17, 17);
-        padding-top: 3px;
-        padding-right: 1px;
-        padding-bottom: 3px;
-        padding-left: 1px;
+                background-color: rgb(12, 224, 12);
+                padding-top: 3px;
+                padding-right: 1px;
+                padding-bottom: 3px;
+                padding-left: 1px;
             }
 
     .bola-giratoria1 {
@@ -184,7 +177,8 @@
         <div class="form-group text-center">
             <p id="output"></p>
         </div>
-            <h1 class="text-center";id = "df">Decifrador:</h1>
+        <body>
+            <h2 class="text-center">Decifrador:</h2>
             <form>
                 <div class="form-group">
                     <label for="plaintext2">Digite a mensagem a ser decifrada:</label>
@@ -210,18 +204,25 @@
             }
 
             function move_letter(c, key){
-                c -= key;
-                if(!check_letter(c))
-                    c += 26;
+                var cInt = c.charCodeAt(0);
+                console.log(cInt);
+                cInt -= key;
+                if(!check_letter(c.charCodeAt(0))){
+                    cInt += 26;
+                }
 
-                return c;
+                console.log(String.fromCharCode(cInt))
+                return String.fromCharCode(cInt);
+
             }
 
             function decipher(plaintext2, key2){
-                var ciphertext = plaintext2;
-                for(var i = 0; i < ciphertext.lenght; i++)
-                    ciphertext[i] = move_letter(ciphertext[i],key2);
-                return ciphertext;
+                console.log(plaintext2);
+                var decipherText = ""
+                for(var i = 0; i < plaintext2.length; i++){
+                    decipherText += move_letter(plaintext2[i], key2);
+                }
+                return decipherText;
             }
 
             function getVar()
