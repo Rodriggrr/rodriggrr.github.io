@@ -187,18 +187,49 @@
             <h1 class="text-center";id = "df">Decifrador:</h1>
             <form>
                 <div class="form-group">
-                    <label for="plaintext">Digite a mensagem a ser decifrada:</label>
-                    <input type="text" class="form-control" id="plaintext">
+                    <label for="plaintext2">Digite a mensagem a ser decifrada:</label>
+                    <input type="text" class="form-control" id="plaintext2">
                 </div>
                 <div class="form-group">
                     <label for="key2">Digite a chave da cifra (1-26):</label>
                     <input type="number" class="form-control" id="key2">
                 </div>
                 <div class="form-group text-center">
-                    <button class="btn btn-primary" onclick="decipher(); return false;">Decifrar</button>
+                    <button class="btn btn-primary" type = "button" onclick="getVar(); return false;">Decifrar</button>
                 </div>
+                <div class="form-group text-center">
+                    <p id="output2"></p>
+                </div>
+        
 
+        <script>
+            function check_letter(c){
+                if(c >= 65 && c <= 90 || c >= 97 && c <= 122)
+                    return true;
+                return false;
+            }
 
+            function move_letter(c, key){
+                c -= key;
+                if(!check_letter(c))
+                    c += 26;
 
+                return c;
+            }
 
+            function decipher(plaintext2, key2){
+                var ciphertext = plaintext2;
+                for(var i = 0; i < ciphertext.lenght; i++)
+                    ciphertext[i] = move_letter(ciphertext[i]);
+                return ciphertext;
+            }
+
+            function getVar()
+            {
+                var plaintext2 = document.getElementById("plaintext2").value;
+                var key2 = document.getElementById("key2").value;
+                var deciphertext = decipher(plaintext2, key2);
+                document.getElementById("output2").innerHTML = "Texto decifrado: " + deciphertext;
+            }
+        </script>
         </body>
