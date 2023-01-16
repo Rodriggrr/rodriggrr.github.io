@@ -207,7 +207,7 @@
 
         <script>
             function check_letter(c){
-                if(c >= 65 && c <= 90 || c >= 97 && c <= 122)
+                if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
                     return true;
                 return false;
             }
@@ -216,7 +216,7 @@
                 var cInt = c.charCodeAt(0);
                 console.log(cInt);
                 cInt -= key;
-                if(!check_letter(c.charCodeAt(0))){
+                if(!check_letter(cInt)){
                     cInt += 26;
                 }
 
