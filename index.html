@@ -5,15 +5,53 @@
     body{
         background-image: url('https://static3.tcdn.com.br/img/img_prod/597409/folha_de_eva_listrado_arco_iris_40x48_2mm_pacote_com_10_un_4471_1_20211220175609.jpg');
         background-repeat: repeat;
-        background-size: fill;
+        background-size: cover;
     }
     #cf{
                 background-color: rgb(12, 224, 12);
-                padding-top: -10px;
-                padding-right: -20px;
-                padding-bottom: -10px;
-                padding-left: -20px;
+                padding-top: 3px;
+                padding-right: 1px;
+                padding-bottom: 3px;
+                padding-left: 1px;
             }
+
+    .bola-giratoria1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  background-image: url('https://images-eds-ssl.xboxlive.com/image?url=wHwbXKif8cus8csoZ03RWwcxuUQ9WVT6xh5XaeeZD01lYI1.K4gGf7cqlZ1YM_tmpeVl.wBeN1iRA9Wb44Yl627YUF.t0NRyaps6lcJ2A1ugEJe2vQ62SP9urp1F6nkGBUPvpGJseNz0AsIiNDQz3Y8oEpZ4xqntGtb2.x3KwICR8gUkaQ19KHFlkMpMqDcH&format=jpg&h=253&w=253');
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotacao 5s linear infinite;
+}
+
+@keyframes rotacao {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.bola-giratoria2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 255);
+  background-image: url('https://images-eds-ssl.xboxlive.com/image?url=wHwbXKif8cus8csoZ03RW_ES.ojiJijNBGRVUbTnZKsoCCCkjlsEJrrMqDkYqs3MuY70FypaPAo1O0mxMTT_MVjiXllaudIqiOdVieeNMSf_g6QLiCSTDMqreCZ.F7QmBl5sgH9.3w4OHz1VqcuewB6ZjJl_32bKyTeQp22qyjo-&format=jpg&h=253&w=253');
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotacao 5s linear infinite;
+}
+
+@keyframes rotacao {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 </style>
 <html>
 
@@ -39,6 +77,8 @@
                 <button class="btn btn-primary" onclick="cipher(); return false;">Cifrar</button>
                 <button class="btn btn-secondary" onclick="clearForm()">Limpar</button>
             </div>
+            <div class="bola-giratoria1"></div>
+            <div class="bola-giratoria2"></div>
             <script>
                 function caesarCipher(plaintext, key) {
                     var ciphertext = "";
