@@ -204,18 +204,25 @@
             }
 
             function move_letter(c, key){
-                c -= key;
-                if(!check_letter(c))
-                    c += 26;
+                var cInt = c.charCodeAt(0);
+                console.log(cInt);
+                cInt -= key;
+                if(!check_letter(c.charCodeAt(0))){
+                    cInt += 26;
+                }
 
-                return c;
+                console.log(String.fromCharCode(cInt))
+                return String.fromCharCode(cInt);
+
             }
 
             function decipher(plaintext2, key2){
-                var ciphertext = plaintext2;
-                for(var i = 0; i < ciphertext.lenght; i++)
-                    ciphertext[i] = move_letter(ciphertext[i]);
-                return ciphertext;
+                console.log(plaintext2);
+                var decipherText = ""
+                for(var i = 0; i < plaintext2.length; i++){
+                    decipherText += move_letter(plaintext2[i], key2);
+                }
+                return decipherText;
             }
 
             function getVar()
