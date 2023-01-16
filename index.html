@@ -14,6 +14,13 @@
                 padding-bottom: 3px;
                 padding-left: 1px;
             }
+            #df{
+                background-color: rgb(12, 224, 12);
+                padding-top: 3px;
+                padding-right: 1px;
+                padding-bottom: 3px;
+                padding-left: 1px;
+            }    
 
     .bola-giratoria1 {
   width: 100px;
@@ -22,7 +29,7 @@
   background-image: url('https://images-eds-ssl.xboxlive.com/image?url=wHwbXKif8cus8csoZ03RWwcxuUQ9WVT6xh5XaeeZD01lYI1.K4gGf7cqlZ1YM_tmpeVl.wBeN1iRA9Wb44Yl627YUF.t0NRyaps6lcJ2A1ugEJe2vQ62SP9urp1F6nkGBUPvpGJseNz0AsIiNDQz3Y8oEpZ4xqntGtb2.x3KwICR8gUkaQ19KHFlkMpMqDcH&format=jpg&h=253&w=253');
   background-size: cover;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 51%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -41,7 +48,7 @@
   background-image: url('https://images-eds-ssl.xboxlive.com/image?url=wHwbXKif8cus8csoZ03RW_ES.ojiJijNBGRVUbTnZKsoCCCkjlsEJrrMqDkYqs3MuY70FypaPAo1O0mxMTT_MVjiXllaudIqiOdVieeNMSf_g6QLiCSTDMqreCZ.F7QmBl5sgH9.3w4OHz1VqcuewB6ZjJl_32bKyTeQp22qyjo-&format=jpg&h=253&w=253');
   background-size: cover;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 40%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -77,6 +84,13 @@
                 <button class="btn btn-primary" onclick="cipher(); return false;">Cifrar</button>
                 <button class="btn btn-secondary" onclick="clearForm()">Limpar</button>
             </div>
+            <div class="form-group text-center">
+                <p id="output"></p>
+            </div>
+
+            <p>
+            </p>
+
             <div class="bola-giratoria1"></div>
             <div class="bola-giratoria2"></div>
             <h3>Colaboradores:</h3>
@@ -174,11 +188,8 @@
             setInterval(changeColor, 50);
             </script>
         </form>
-        <div class="form-group text-center">
-            <p id="output"></p>
-        </div>
         <body>
-            <h2 class="text-center">Decifrador:</h2>
+            <h2 class="text-center";id = "df">Decifrador:</h2>
             <form>
                 <div class="form-group">
                     <label for="plaintext2">Digite a mensagem a ser decifrada:</label>
