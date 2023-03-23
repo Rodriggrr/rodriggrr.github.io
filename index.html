@@ -229,7 +229,8 @@
                 console.log(plaintext2);
                 var decipherText = ""
                 for(var i = 0; i < plaintext2.length; i++){
-                    decipherText += move_letter(plaintext2[i], key2);
+                    if(plaintext2[i] != " ")
+                        decipherText += move_letter(plaintext2[i], key2);
                 }
                 return decipherText;
             }
