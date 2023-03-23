@@ -231,6 +231,8 @@
                 for(var i = 0; i < plaintext2.length; i++){
                     if(plaintext2[i] != " ")
                         decipherText += move_letter(plaintext2[i], key2);
+                    else
+                        decipherText += " ";
                 }
                 return decipherText;
             }
