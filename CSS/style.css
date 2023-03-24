@@ -9,15 +9,14 @@ body {
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
-    height: 100vh; /* define a altura para ocupar toda a tela */
-    width: 100vw; /* define a largura para ocupar toda a tela */
+    
 }
 
 body:focus-within {
     backdrop-filter: blur(4px); /* aplica o desfoque em toda a área do body */
 }
 
-.btn
+.form-css > .btn
 {
     background-color: rgba(209, 232, 252, 0.743);
     backdrop-filter: blur(5px);
@@ -25,11 +24,11 @@ body:focus-within {
     font-size: 25px;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-family: "Cascadia Mono";
+    font-family: "Courier New";
     padding: 10px;
-    width: 100%;
+    width: 100vh;
     color: rgb(255, 255, 255);
-    font-family: "Cascadia Mono" ;
+    font-family: "Courier New" ;
     font-size: 20px;
     backdrop-filter: blur(5px);
     font-weight: bold;
@@ -38,7 +37,7 @@ body:focus-within {
     display: initial;
 }
 
-.btn:focus{
+.btn:onclick{
     outline: none;
     border: 1px solid rgba(88, 80, 51, 0.5); 
     zoom: 99.6%;
@@ -46,11 +45,21 @@ body:focus-within {
 
 }
 
+.btn:hover{
+    outline: none;
+    border: 1px solid rgba(88, 80, 51, 0.5); 
+    zoom: 99.6%;
+    transform: scale(1.03)
+}
+
+.all-page{
+    height: 100vh;
+}
 
 .logintext {
     color: rgb(199, 183, 133);
     font-size: 50px;
-    font-family: "Cascadia Mono";
+    font-family: "Courier New";
     font-weight: bold;
     padding-top: 150px;
     text-align: center;
@@ -64,21 +73,24 @@ body:focus-within {
     border-radius: 10px;
     padding: 20px;
     margin: 0 auto;
-    width: 400px;
+    width: 100vh;
     margin-top: 50px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     color: rgb(217, 200, 151);
-    font-family: "Cascadia Mono" ;
+    font-family: "Courier New" ;
     font-size: 20px;
     backdrop-filter: blur(5px);
     font-weight: bold;
+    size: relative;
 }
   
 
-.input-text {
-    width: 394px;
+.form-css > .input-text {
+    
+    width: 99vh;
     padding-top: 5px;
+    margin-right: 200px;
     padding-bottom: 5px;
     background-color: rgba(209, 232, 252, 0.743);
     backdrop-filter: blur(5px);
@@ -86,7 +98,7 @@ body:focus-within {
     font-size: 25px;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-family: "Cascadia Mono";
+    font-family: "Courier New";
 }
 
 .input-text:focus {
