@@ -1,0 +1,95 @@
+body {
+    width: 80vh;
+    height: 100vh;
+    background-color: rgb(68, 174, 198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+@font-face {
+    font-family: Retro;
+    src: url(JetBrainsMonoNerdFontPropo-Bold.ttf);
+}
+
+.logo-name {
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+    box-shadow: -0px 6px 0px rgba(0, 0, 0, 0.337), 0px 8px 3px rgba(0, 0, 0, 0.450);
+    margin-top: 15px;
+    font-family: Retro;
+    font-size: 45px;
+    color:  rgb(0, 0, 0);
+    padding: 2%;
+}
+
+.page {
+    min-width: 300px;
+    min-height: 350px;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -0px 11px 10px rgba(0, 0, 0, 0.337), 0px 8px 0px rgb(167, 197, 224);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.credentials {
+    width: 80%;
+    height: 50%;
+    box-shadow: -0px 11px 10px rgba(0, 0, 0, 0.337) inset, 0px 8px 0px rgb(152, 152, 152) inset;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.credential-input, .button {
+    border: none;
+    max-width: 150px;
+    font-family: Retro;
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+    box-shadow: -0px 6px 0px rgba(0, 0, 0, 0.337), 0px 8px 3px rgba(0, 0, 0, 0.450);
+    caret-color: rgb(255, 157, 0);
+    color: rgb(255, 157, 0);
+}
+
+.credential-input::placeholder {
+    font-family: Retro;
+    color: rgb(152, 152, 152);
+}
+
+.credential-input:focus, .button:active {
+    outline: none;
+    box-shadow: none;
+    margin-top: 6px;
+    margin-bottom: -6px;
+    background-color: rgb(187, 255, 182);
+}
+
+.credential-input:focus::placeholder {
+    color: rgba(255, 106, 0, 0.218);
+}
+
+
+.button:hover, .credential-input:hover {
+    background-color: rgb(187, 255, 182);
+}
+
+.button:hover {
+    cursor: pointer;
+}
