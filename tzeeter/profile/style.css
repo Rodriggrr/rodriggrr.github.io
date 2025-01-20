@@ -272,6 +272,7 @@ main button:hover {
     max-width: 80%;
     text-decoration: none;
     border: none;
+    color: var(--font-color);
     background-color: transparent;
 }
 
@@ -279,6 +280,8 @@ main button:hover {
     border: none;
     outline: none;
 }
+
+
 
 .others > .container {
     display: flex;
