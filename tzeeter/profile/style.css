@@ -97,6 +97,10 @@ main button:hover {
     text-decoration: none;
 }
 
+.nav .search-hidden {
+    display: none;
+}
+
 .nav > .lever {
     margin-top: auto;
     align-self: center;
@@ -385,6 +389,10 @@ main button:hover {
         padding-bottom: 0px;
         transform: rotate(-90deg);
         padding-left: 80px;
+    }
+
+    .nav .search-hidden {
+        display: block;
     }
 
     .tzeet {
