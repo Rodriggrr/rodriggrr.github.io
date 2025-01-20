@@ -1,7 +1,3 @@
-img {
-    display: block; /* Garantir que a imagem se ajuste sem distorcer */
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -58,8 +54,7 @@ main button:hover {
 }
 
 .nav img {
-    align-self: flex-start;
-    padding: 8px;
+    width: 35px;
 }
 
 .nav > ul {
@@ -106,6 +101,7 @@ main button:hover {
     margin-top: auto;
     align-self: center;
     padding-bottom: 50px;
+    transition: transform 0.3s ease, padding 0.3s ease;
 }
 
 .profile {
@@ -343,8 +339,8 @@ main button:hover {
 
     .nav {
         transition: width 0.5s ease-in-out;
-        width: 50px;
-        min-width: 50px;
+        width: 30px;
+        min-width: 30px;
     }
 
     .nav.show {
@@ -380,6 +376,12 @@ main button:hover {
     .nav > img {
         animation: mover 0.2s ease-in-out;
         align-self: center;
+    }
+
+    .nav > .lever {
+        padding-bottom: 0px;
+        transform: rotate(-90deg);
+        padding-left: 80px;
     }
 
     .tzeet {

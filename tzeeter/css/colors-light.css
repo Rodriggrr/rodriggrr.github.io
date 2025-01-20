@@ -10,3 +10,11 @@
     --search-bar-font-color: rgba(100, 100, 100, 0.8);
     --search-bar-bg-color: var(--hover-color);
 }
+
+/* Logo color with filters (the best i can do for now) 
+   https://isotropic.co/tool/hex-color-to-css-filter/
+   Try to match "--font-color"
+*/
+.nav img {
+    filter: invert(0%) sepia(4%) saturate(7500%) hue-rotate(223deg) brightness(92%) contrast(103%);
+}
