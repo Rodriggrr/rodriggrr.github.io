@@ -1,0 +1,12 @@
+:root {
+    --bg-color: #2E2A26; /* Cor de fundo café escuro */
+    --font-color: #F4E1D2; /* Texto creme claro */
+    --border-color: rgba(255, 255, 255, 0.1); /* Borda clara suave */
+    --hover-color: rgba(255, 255, 255, 0.2); /* Cor de hover suave */
+    --button-bg-color: #9E7A5F; /* Cor do botão, um marrom suave */
+    --button-font-color: white; /* Cor do texto do botão */
+    --main-link-color: #D1B097; /* Cor dos links, um tom quente de creme */
+    --index-font-color: #F4E1D2; /* Cor dos textos principais, mesma do texto */
+    --search-bar-font-color: #9E7A5F; /* Cor do texto da barra de pesquisa */
+    --search-bar-bg-color: #4B3F33; /* Cor de fundo da barra de pesquisa, tom café */
+}

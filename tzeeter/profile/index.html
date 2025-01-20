@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-common.css">
+    <link rel="stylesheet" href="../css/theme-lever.css">
+    <link rel="stylesheet" href="../css/colors-light.css" id="lm">
+    <link rel="stylesheet" href="../css/colors-dark.css"  id="dm" disabled>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Tzeeter</title>
@@ -10,29 +14,38 @@
 <body>
     <main>
         <aside class="nav show">
-            <a href=""><img src="img/tiziu.png"> </a>
+            <a href=""><img src="../img/tiziu.png"> </a>
             <ul>
-                <li> <a href=""><i class="bi bi-house"></i>       <span>Home</span> </a> </li>
-                <li> <a href=""><i class="bi bi-hash"></i>        <span>Explore</span> </a> </li>
-                <li> <a href=""><i class="bi bi-bell"></i>        <span>Notifications</span> </a> </li>
-                <li> <a href=""><i class="bi bi-envelope"></i>    <span>Messages</span> </a> </li>
-                <li> <a href=""><i class="bi bi-person-fill"></i> <span>Profile</span> </a> </li>
-                <li> <a href=""><i class="bi bi-three-dots"></i>  <span>More</span> </a> </li>        
+                <li> <a href=""><i class="bi bi-house">       </i> <span>Home         </span> </a> </li>
+                <li> <a href=""><i class="bi bi-hash">        </i> <span>Explore      </span> </a> </li>
+                <li> <a href=""><i class="bi bi-bell">        </i> <span>Notifications</span> </a> </li>
+                <li> <a href=""><i class="bi bi-envelope">    </i> <span>Messages     </span> </a> </li>
+                <li> <a href=""><i class="bi bi-person-fill"> </i> <span>Profile      </span> </a> </li>
+                <li> <a href=""><i class="bi bi-three-dots">  </i> <span>More         </span> </a> </li>        
             </ul>
-            <button><i class="bi bi-chat"></i><span>Tzeet</span></button>
+            <button> <i class="bi bi-chat"></i> <span>Tzeet</span> </button>
+
+            <label class="lever">
+                <input type="checkbox" id="toggle"/>
+                <label class="track" for="toggle">
+                    <i class="bi bi-moon-stars-fill"></i>
+                    <span class="circle dark" ></span>
+                    <i class="bi bi-brightness-low-fill"></i>
+                </label>
+            </label>
         </aside>
 
         <section class="center">
             <div class="profile">
                 <div class="row-container">
-                    <img src="img/pp.png" alt="">
+                    <img src="../img/pp.png" alt="">
                     <button>Edit Profile</button>
                 </div>
 
-                <b class="name">Bruno Góis Matheus</b>
+                <span class="name"><b>Bruno Góis Matheus</b></span>
                 <a class="username" href="">@brunomateuss</a>
 
-                <div class="bio">Android Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University of Ceará</div>
+                <span class="bio">Android Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University of Ceará</span>
                 
                 <ul class="info">
                     <li class="location"> 
@@ -63,7 +76,7 @@
 
                 <section class="tzeet">
                     <header>
-                        <img src="img/pp.png" alt="">
+                        <img src="../img/pp.png" alt="">
                         <span class="name">Atila Amarino</span> <span class="user">@oatila</span> <span class="date">Oct 21, 2021</span>
                     </header>
                         <div class="text">Se vai furar o orçamento, dá pra financiar absorventes e a ciência? Ou só voto mesmo?</div>
@@ -78,7 +91,7 @@
                 
                 <section class="tzeet">
                     <header>
-                        <img src="img/pp.png" alt="">
+                        <img src="../img/pp.png" alt="">
                         <span class="name">Bruno Góis Mateus</span> <span class="user">@brunomateuss</span> <span class="date">Jun 1, 2011</span>
                     </header>
                     <div class="text">something really bad is happing in somewhere in the world .. gmal is off</div>
@@ -93,7 +106,7 @@
 
                 <section class="tzeet">
                     <header>
-                        <img src="img/pp.png" alt="">
+                        <img src="../img/pp.png" alt="">
                         <span class="name">Adeilson Ádila</span> <span class="user">@adeilson</span> <span class="date">13, Jan 2027</span>
                     </header>
                     <div class="text">No conto de sísifo, eu era a pedra.</div>
@@ -119,17 +132,17 @@
                 <b>Maybe you'll like</b>
 
                 <section class="person">
-                    <img src="img/pp.png">
+                    <img src="../img/pp.png">
                     <a href="">Carlos</a>
                     <button>Follow</button>
                 </section>
                 <section class="person">
-                    <img src="img/pp.png">
+                    <img src="../img/pp.png">
                     <a href="">Maria</a>
                     <button>Follow</button>
                 </section>
                 <section class="person">
-                    <img src="img/pp.png">
+                    <img src="../img/pp.png">
                     <a href="">Ana</a>
                     <button>Follow</button>
                 </section>
@@ -142,5 +155,27 @@
 
     </main>
 
+    <script>
+        const toggle = document.getElementById('toggle');
+        const lm = document.getElementById('lm');
+        const dm = document.getElementById('dm');
+    
+        // Função para alternar os temas
+        function toggleTheme() {
+            if (toggle.checked) {
+                lm.disabled = true;
+                dm.disabled = false;
+            } else {
+                lm.disabled = false;
+                dm.disabled = true;
+            }
+        }
+    
+        // Executar ao carregar a página
+        toggleTheme();
+    
+        // Adicionar evento ao checkbox
+        toggle.addEventListener('change', toggleTheme);
+    </script>
 </body>
 </html>
